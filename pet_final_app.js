@@ -169,6 +169,7 @@ $(function(){
   })
    //quit button  
    $('#quit_button').click(function(e){
+       window.location.href = "https://danieljanderson.github.io/"
     
   })
   }
