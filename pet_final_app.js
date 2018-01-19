@@ -2,7 +2,8 @@
 // out layout.
 $(function(){
   var pet
-  var start = function ()
+ 
+  var start = function()
   {
     var name = prompt("what is your pets name")
     pet = new tom.Pet(name)
@@ -53,7 +54,9 @@ $(function(){
       var Attribute_html = $("<div id = 'pets_Attribute'></div>")
       $('#stats_container').append(Attribute_html)
       $('#pets_Attribute').before("<div id='Attribute_title'>Power Level</div>")
-    }
+      
+      $('maci').css("display", 'none');
+  }
     var statbar = $("<div id = 'actual_Foodbar'></div")
       $('#pets_Foodbar').append(statbar)
   
@@ -64,6 +67,7 @@ $(function(){
     $('#pets_Energy').html(pet.energy)
     $('#pets_Happiness').html(pet.happiness)
     $('#pets_Attribute').html(pet.level)
+    $('#picture_actions').hide()
   }
   var buttonsActions = function (){
       
@@ -146,6 +150,7 @@ $(function(){
      
        //battle button    
      $('#battle_button').click(function(e){
+       $('#picture_actions').show(400)
         living()
         checkAttribute()
        alert(pet.battle())
@@ -158,7 +163,7 @@ $(function(){
     //help button
     $('#help_button').click(function(e){
      alert(pet.getHelpMessage())
-    $('#help_display').show(400)
+    $('#help_display').show(0)
    
     })
      
