@@ -17,7 +17,9 @@ background-size:cover;
 
 }
 
-
+#picture_actions{
+  display:none
+}
 
 .goal{
   width:50%;

@@ -55,7 +55,7 @@ $(function(){
       $('#stats_container').append(Attribute_html)
       $('#pets_Attribute').before("<div id='Attribute_title'>Power Level</div>")
       
-      $('maci').css("display", 'none');
+   
   }
     var statbar = $("<div id = 'actual_Foodbar'></div")
       $('#pets_Foodbar').append(statbar)
@@ -67,7 +67,7 @@ $(function(){
     $('#pets_Energy').html(pet.energy)
     $('#pets_Happiness').html(pet.happiness)
     $('#pets_Attribute').html(pet.level)
-    $('#picture_actions').hide()
+   
   }
   var buttonsActions = function (){
       
@@ -150,7 +150,9 @@ $(function(){
      
        //battle button    
      $('#battle_button').click(function(e){
-       $('#picture_actions').show(400)
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/battle.jpg')
+      $('#picture_actions').css("display","float")
         living()
         checkAttribute()
        alert(pet.battle())
@@ -180,6 +182,9 @@ $(function(){
   }
   var living = function (){
     if (!pet.alive){
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/dead.jpg')
+      $('#picture_actions').css("display","float")
       alert(pet.name+" just died")
       $('.action_btn').css("cursor","not-allowed")
      
