@@ -49,3 +49,12 @@ background-size:cover;
 .btn:hover{
   background-color:#110E91;
 }
+#pet_picture{
+  width:300px;
+  height:auto;
+}
+#picture_actions{
+  width:300px;
+  height:auto;
+}
+

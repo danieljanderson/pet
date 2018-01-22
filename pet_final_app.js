@@ -191,7 +191,8 @@ $(function(){
     })
      
       //start over  button
-      $('#start_over_button').click(function(e) {    
+      $('#start_over_button').click(function(e) {  
+        $('#picture_actions').hide(0)
       start()
        // location.reload()
   })
@@ -221,7 +222,7 @@ $(function(){
         $("#pet_picture").attr('src','images/level_1.jpg')
         break;
       case 2:
-        $("pet_picture").attr('src','images/level_2.jpg')
+        $("#pet_picture").attr('src','images/level_2.jpg')
         break;
       case 3:
         $('#pet_picture').attr('src','images/level_3.jpg')
