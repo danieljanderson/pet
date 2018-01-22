@@ -74,6 +74,9 @@ $(function(){
       //feed button
       $('#feed_button').click(function(e){
         // $('#feed_button').click($.proxy(pet,"feed")) 
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/feed.jpg')
+      $('#picture_actions').css("display","float")
           living()
           checkAttribute()
           pet.feed()
@@ -84,7 +87,10 @@ $(function(){
    
       //sleep button
       $('#sleep_button').click(function(e){
-         living()
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/sleep.jpg')
+      $('#picture_actions').css("display","float") 
+        living()
          checkAttribute()
          pet.sleep()
          checkAttribute()
@@ -95,7 +101,10 @@ $(function(){
     
       //play button    
       $('#play_button').click(function(e){
-         living()
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/play.jpg')
+      $('#picture_actions').css("display","float") 
+        living()
          checkAttribute()
          pet.play()
          checkAttribute()
@@ -106,7 +115,10 @@ $(function(){
      
      //walk button
      $('#walk_button').click(function(e){
-        living()
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/walk.jpg')
+      $('#picture_actions').css("display","float") 
+       living()
         checkAttribute()
         pet.goWalk()
         checkAttribute()
@@ -117,7 +129,10 @@ $(function(){
     
       //train_button
      $('#train_button').click(function(e){
-         living()
+      $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/train.jpg')
+      $('#picture_actions').css("display","float") 
+        living()
          checkAttribute()
          pet.train()
          checkAttribute()
@@ -128,6 +143,9 @@ $(function(){
      
        //come home button
       $('#come_home_button').click(function(e){
+           $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/come_home.jpg')
+      $('#picture_actions').css("display","float")
           living()
           checkAttribute()
           pet.comeHome()
@@ -139,7 +157,10 @@ $(function(){
      
        // leave button
       $('#leave_button').click(function(e){
-          living()
+         $('#picture_actions').show(0)
+      $("#picture_actions").attr('src','images/leave.jpg')
+      $('#picture_actions').css("display","float")  
+        living()
           checkAttribute()
           pet.leave()
           checkAttribute()
@@ -197,19 +218,19 @@ $(function(){
     var evoState = pet.level
     switch (evoState){
       case 1:
-        $("#pet_picture").attr('src','http://www.placecage.com/c/200/300')
+        $("#pet_picture").attr('src','images/level_1.jpg')
         break;
       case 2:
-        $("pet_picture").attr('src','http://www.fillmurray.com/500/600.jpg')
+        $("pet_picture").attr('src','images/level_2.jpg')
         break;
       case 3:
-        $('#pet_picture').attr('src','http://www.fillmurray.com/200/700.jpg')
+        $('#pet_picture').attr('src','images/level_3.jpg')
         break
       case 4:
-        $('#pet_picture').attr('src','http://www.fillmurray.com/400/300.jpg')
+        $('#pet_picture').attr('src','images/level_4.jpg')
         break
       case 5:
-        $('#pet_picture').attr('src','http://www.fillmurray.com/100/700.jpg')
+        $('#pet_picture').attr('src','images/level_5.jpg')
         break
       default:
       break
