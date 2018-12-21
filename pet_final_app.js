@@ -8,7 +8,7 @@ $(function(){
     do{
     var name = prompt("what is your pets name")
     }
-    while(name ===null or name==="")
+    while(name ===null || name==="")
     pet = new tom.Pet(name)
     displayStats()
     $('.action_btn').css("cursor","pointer")
