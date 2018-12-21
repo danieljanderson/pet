@@ -4,8 +4,11 @@ $(function(){
   var pet
  
   var start = function()
-  {
+  { var name = ""
+    do{
     var name = prompt("what is your pets name")
+    }
+    while(name ===null)
     pet = new tom.Pet(name)
     displayStats()
     $('.action_btn').css("cursor","pointer")
@@ -15,32 +18,10 @@ $(function(){
       var Name_html = $("<div id= 'pets_Name'></div>")
       $('#stats_container').append(Name_html)
       $('#pets_Name').before("<div id= 'Name_title'> Name </div>")
-     
-    // for some reason i can not add another div inside of pets_Foodbar
-    // I have tried putting lines 29-32 after line 28 and  outside the create Fields function
-    // and none of that works
-    // the code below is code i found on the internet but still doesnt work.
-    // $('#stats_container').append(
-      //  $('<div/>')
-     //       .attr("id","pets_Foodbar")
-     //       .addClass("bar")
-     //        .append("<span/>")
-      //      .html("Food"))
-      //this doesnt work either
-    //var Food_html = $("<div id='pets_Foodbar' class ='bar'><div id ='better work'></div></div>");
 
       var Food_html = $("<div id='pets_Foodbar' class ='bar'></div>");
-      //var bar = $("<div class='actual' id='bar'></div>");
       $('#stats_container').append(Food_html);
-      //$('#pets_Food').prepend(bar);
-      $('#pets_Foodbar').before("<div id='Food_title'>Food</div>");
-      //$('#pets_Foodbar').add("div").addClass("actual")
-      //var Food_html = $("<div id='pets_Food' class='goal'></div>");
-      //var bar=$("<div class ='actual'></div>");
-      //$('#stats_container').append(Food_html)
-      //$('#pets_Food').append(bar)
-      //$('#pets_Food').before("<div id= 'Food_title'> Food </div>")
-     // $('#pets_Foodbar').append("<div id='actual'></div>")
+      $('#pets_Foodbar').before("<div id='Food_title'>Food</div>")
       
     
     var Energy_html = $("<div id= 'pets_Energy'></div>")
