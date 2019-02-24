@@ -1,7 +1,7 @@
 // make a display stats function in the app js file.
 var tom = (function(){	
 	var Pet = function (name){
-		this.name = name
+		this.name = name,
 		this.food = 5,
 		this.energy = 5,
 		this.happiness = 5,
